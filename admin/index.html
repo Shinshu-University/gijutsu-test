@@ -280,7 +280,7 @@
             storage.AssetType.Sound,
             storage.AssetType.Font
           ].filter(i => i),
-          (asset) => new URL('/admin/assets/' + asset.assetId + '.' + asset.dataFormat, location).href
+          (asset) => new URL('/gijutsu-test/admin/assets/' + asset.assetId + '.' + asset.dataFormat, location).href
         );
         return () => new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
@@ -300,7 +300,7 @@
           }
         };
         xhr.responseType = 'arraybuffer';
-        xhr.open('GET', "/admin/assets/project.json");
+        xhr.open('GET', "/gijutsu-test/admin/assets/project.json");
         xhr.send();
       });
       })();
